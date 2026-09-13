@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment_2_Leader_Shadi_Master_Class_Leadership_School_Program</title>
+<style>
+@font-face { font-family:'Caveat'; font-weight:600; src:url('fonts/Caveat-600.ttf') format('truetype'); }
+@font-face { font-family:'Caveat'; font-weight:700; src:url('fonts/Caveat-700.ttf') format('truetype'); }
+@font-face { font-family:'Kalam'; font-weight:400; src:url('fonts/Kalam-400.ttf') format('truetype'); }
+@font-face { font-family:'Kalam'; font-weight:700; src:url('fonts/Kalam-700.ttf') format('truetype'); }
+
+@page { size: A4; margin: 0; }
+* { margin:0; padding:0; box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+body { font-family:"Kalam","Caveat",cursive; color:#1b2740; text-rendering:optimizeLegibility; }
+
+.page { width:210mm; height:297mm; position:relative; overflow:hidden; background:#fdfcf5; page-break-after:always; }
+.sheet { position:absolute; top:5mm; left:5mm; right:5mm; bottom:5mm; background:
+  repeating-linear-gradient(to bottom, transparent 0, transparent 9.6mm, rgba(110,160,225,.30) 9.6mm, rgba(110,160,225,.30) 9.95mm),
+  linear-gradient(to right, transparent 0, transparent 15mm, rgba(240,120,120,.45) 15mm, rgba(240,120,120,.45) 15.5mm, transparent 15.5mm),
+  #fdf8ee;
+  border:3px solid #232323; border-radius:9px; box-shadow:0 14px 26px rgba(30,20,5,.35); padding:13mm 12mm 14mm 20mm; }
+
+.sheet::after { content:""; position:absolute; top:0; left:0; right:0; bottom:0; border-radius:9px; pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.55 0 0 0 0 0.45 0 0 0 0 0.30 0 0 0 0.05 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+  background-size:240px 240px; }
+.sheet::before { content:""; position:absolute; top:0; left:0; right:0; bottom:0; border-radius:9px; pointer-events:none; z-index:0;
+  background:radial-gradient(ellipse at 15% 8%, rgba(255,250,235,.9), transparent 50%),
+  radial-gradient(ellipse at 90% 95%, rgba(190,150,95,.14), transparent 55%),
+  linear-gradient(160deg, rgba(255,255,255,.35), transparent 40%, rgba(120,90,40,.05)); }
+
+.hdr { position:absolute; top:2.5mm; right:8mm; text-align:right; z-index:5; }
+.hdrtxt { font-family:"Caveat"; font-weight:700; font-size:19px; color:#37474f; border-bottom:2.5px solid #e05252; padding-bottom:1px; }
+.ftr { position:absolute; bottom:2.2mm; left:8mm; right:8mm; display:flex; justify-content:space-between; font-size:11.5px; color:#546e7a; z-index:5; }
+.ftr .fr b { color:#c62828; }
+
+h1.t { font-family:"Caveat"; font-weight:700; font-size:37px; color:#1a237e; text-decoration:underline wavy #e05252 2.5px; text-underline-offset:6px; margin-bottom:3mm; }
+h2.s { font-family:"Caveat"; font-weight:700; font-size:25px; color:#ad1457; margin:3.2mm 0 1.2mm; }
+p, li { font-size:14px; line-height:2.02; font-weight:700; letter-spacing:.15px; }
+ul { list-style:none; } li::before { content:"✿ "; color:#e05252; }
+.small { font-size:11px; color:#607d8b; }
+
+.hk { padding:1px 8px; border-radius:6px; font-weight:700; box-decoration-break:clone; -webkit-box-decoration-break:clone; box-shadow:0 1px 3px rgba(0,0,0,.22); }
+.hk.y { background:#ffeb3b; text-decoration:underline wavy #f57f17 2.5px; text-underline-offset:3px; }
+.hk.p { background:#ff8ec3; text-decoration:underline wavy #ad1457 2.5px; text-underline-offset:3px; }
+.hk.b { background:#90caf9; text-decoration:underline wavy #1565c0 2.5px; text-underline-offset:3px; }
+.hk.g { background:#a8e6cf; text-decoration:underline wavy #2e7d32 2.5px; text-underline-offset:3px; }
+.hk.v { background:#ce93d8; text-decoration:underline wavy #6a1b9a 2.5px; text-underline-offset:3px; }
+.hk.o { background:#ffcc80; text-decoration:underline wavy #e65100 2.5px; text-underline-offset:3px; }
+
+.st { position:absolute; z-index:3; filter:drop-shadow(3px 7px 6px rgba(0,0,0,.38)) saturate(1.05); }
+.pola { position:absolute; z-index:3; background:#fff; padding:2mm 2mm 1.6mm; border:1px solid #cfcfcf; box-shadow:0 10px 22px rgba(0,0,0,.42); border-radius:2px; text-align:center; }
+.pola img { max-width:100%; display:block; }
+.pola .cap { font-family:"Caveat"; font-size:11.5px; color:#455a64; padding-top:1mm; }
+
+.keylbl { font-size:9.6px; color:#6d4c41; font-style:italic; background:#fff8e1; border:1px dashed #bcaaa4; border-radius:8px; padding:0 6px; display:inline-block; transform:rotate(-1.5deg); z-index:4; }
+.note { position:relative; background:linear-gradient(175deg,#fff9a8,#ffef6e); border-radius:3px; box-shadow:0 12px 20px rgba(0,0,0,.32); padding:6mm 8mm 6mm 10mm; transform:rotate(-2deg); z-index:4; }
+.note::before { content:""; position:absolute; top:-5mm; left:50%; margin-left:-5mm; width:10mm; height:10mm; border-radius:50%;
+  background:radial-gradient(circle at 35% 35%, #ef9a9a, #c62828 65%, #8e0000); box-shadow:0 3px 5px rgba(0,0,0,.4); }
+.note h3 { font-family:"Caveat"; font-size:23px; color:#b71c1c; margin-bottom:1.5mm; }
+.note p { font-size:13.5px; color:#4e342e; }
+
+.ribbon { display:inline-block; background:#ffe082; border:2px solid #f9a825; border-radius:4px; padding:0 8px; font-family:"Caveat"; font-weight:700; font-size:16px; color:#e65100; transform:rotate(-1.2deg); box-shadow:2px 3px 0 rgba(0,0,0,.15); }
+.twocol { display:flex; gap:6mm; } .twocol > div { flex:1; }
+.goalbox { background:rgba(255,255,255,.75); border:2px dashed #90a4ae; border-radius:6px; padding:2mm 3mm; margin-bottom:2.4mm; }
+.sig { font-family:"Caveat"; font-size:30px; color:#1a237e; transform:rotate(-3deg); display:inline-block; }
+.bunt { position:absolute; top:0; left:0; right:0; height:9mm; width:100%; opacity:.95; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div class="page"><div class="sheet">
+<svg class="bunt" viewBox="0 0 624 26" preserveAspectRatio="none"><path d="M0,6 Q312,26 624,6" fill="none" stroke="#555" stroke-width="2"/><polygon points="0,22 13,2 26,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="26,22 39,2 52,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="52,22 65,2 78,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="78,22 91,2 104,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="104,22 117,2 130,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="130,22 143,2 156,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="156,22 169,2 182,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="182,22 195,2 208,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="208,22 221,2 234,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="234,22 247,2 260,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="260,22 273,2 286,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="286,22 299,2 312,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="312,22 325,2 338,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="338,22 351,2 364,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="364,22 377,2 390,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="390,22 403,2 416,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="416,22 429,2 442,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="442,22 455,2 468,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="468,22 481,2 494,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="494,22 507,2 520,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="520,22 533,2 546,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="546,22 559,2 572,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="572,22 585,2 598,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="598,22 611,2 624,22" fill="#ba68c8" stroke="#333" stroke-width="1"/></svg>
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<img class="st" style="top:12mm;left:24mm;width:30mm;opacity:.14" src="assets/img001.png">
+<div style="text-align:center; margin-top:10mm; position:relative; z-index:2;">
+  <div class="small" style="font-size:13px; color:#6a1b9a;">True to my soul, my voice, my pain, and my rising.</div>
+  <div style="font-family:'Caveat'; font-weight:700; font-size:64px; color:#b71c1c; line-height:1.05; text-shadow:2px 3px 0 rgba(0,0,0,.12);">My Leader Shadi</div>
+  <div style="font-size:15px; color:#37474f; margin-top:2mm;">"From your resonant words, in a rhythm both comfortable and easy to connect with:<br>perfection is not for humans."</div>
+</div>
+<img class="st" style="top:52mm;left:50%;transform:translateX(-50%);width:100mm;z-index:1" src="assets/img002.png">
+<img class="st" style="top:55mm;left:16mm;width:40mm;transform:rotate(-6deg)" src="assets/img003.png">
+<img class="st" style="top:55mm;right:14mm;width:38mm;transform:rotate(5deg)" src="assets/img004.png">
+<div style="position:absolute; top:128mm; left:24mm; right:24mm; text-align:center; z-index:2;">
+  <p style="font-size:14px; color:#4e342e;">Assignment 2 was more than just work.<br>It felt like a filter for the soul – stirring, honest, and quietly healing.<br>All my appreciation for your time, your effort, and your heartfelt presence,<br>my distinguished leader. 💙</p>
+</div>
+<div style="position:absolute; bottom:34mm; left:20mm; right:20mm; z-index:2;">
+  <svg viewBox="0 0 700 150" style="width:100%;">
+    <path d="M40,110 C140,40 240,130 350,70 C460,20 560,120 660,55" fill="none" stroke="#e05252" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+    <polygon points="660,55 636,48 644,72" fill="#e05252"/>
+    <circle cx="40" cy="110" r="10" fill="#ffeb3b" stroke="#333" stroke-width="2"/>
+    <circle cx="240" cy="103" r="10" fill="#ff8ec3" stroke="#333" stroke-width="2"/>
+    <circle cx="440" cy="48" r="10" fill="#90caf9" stroke="#333" stroke-width="2"/>
+    <circle cx="660" cy="55" r="10" fill="#a8e6cf" stroke="#333" stroke-width="2"/>
+    <text x="18" y="142" font-family="Caveat" font-size="26" fill="#1a237e" font-weight="bold">A1 · Goals</text>
+    <text x="196" y="142" font-family="Caveat" font-size="26" fill="#1a237e" font-weight="bold">A2 · Plan</text>
+    <text x="390" y="30" font-family="Caveat" font-size="26" fill="#1a237e" font-weight="bold">The Story</text>
+    <text x="586" y="142" font-family="Caveat" font-size="26" fill="#1a237e" font-weight="bold">Freedom</text>
+  </svg>
+  <div class="small" style="text-align:center;">— the map of the journey —</div>
+</div>
+<div style="position:absolute; bottom:17mm; left:0; right:0; text-align:center; z-index:2;">
+  <span class="ribbon">SOUL GOALS &nbsp;&gt;&nbsp; Material</span>
+</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>1 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 2: My Goals -->
+<div class="page"><div class="sheet">
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">Page 1: Beginning... My Goals</h1>
+<p>Thank you, Leader Shadi...<br>How truly fortunate I am. I was a small, unseen part of a giant structure, under leadership that is generous and distinguished, like yours. I am proud to be your student, and every workshop I attend gives me a new tool that pushes me toward what was once difficult.</p>
+<p>I started here to learn, not to prove.<br>If I had joined ten years ago, my goals were all material.<br>Today, they are different. Today, they are <b>soul goals.</b></p>
+<p style="text-align:center; margin:2mm 0;"><span class="hk y">"My spaces must be equal to or bigger than my jumps. Limits don't attract me. I learned that small spaces choke big souls."</span></p>
+<img class="st" style="top:118mm;right:12mm;width:40mm;transform:rotate(7deg)" src="assets/img005.png">
+<div class="keylbl" style="position:absolute; top:112mm; right:16mm;">✎ key: material goals — happily replaced</div>
+<img class="st" style="top:118mm;left:8mm;width:32mm;transform:rotate(-8deg)" src="assets/img006.png">
+<div class="keylbl" style="position:absolute; top:150mm; left:10mm;">✎ key: aim true</div>
+<div class="goalbox" style="margin-top:3mm;">
+  <h2 class="s">🌀 Goal 1: Discovery</h2>
+  <p>Discover what I don't know.<br>Fruitful leaders: Leader Shadi, Leader Alan, Leader Michael – like a tornado. To find what fits me, not what they told me fits.</p>
+</div>
+<div class="goalbox">
+  <h2 class="s">🧠 Goal 2: Crowded Mind</h2>
+  <p>Routine kills creativity – renew my internal structure.<br>Pull myself from the noise around me, to myself. From against myself, to with myself. Turn distraction into a tool.</p>
+</div>
+<div class="goalbox">
+  <h2 class="s">🛠️ Goal 3: Increase Toolkit</h2>
+  <p>From traditional to beloved madness. Build tools that love my craziness. Because spaces must be equal to or bigger than my jumps.</p>
+</div>
+<div style="position:absolute; bottom:15mm; left:20mm;" class="keylbl">✎ key: wonder · aim true · read rise</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>2 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 3: Uprooting -->
+<div class="page"><div class="sheet">
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">Page 2: My Most Believed Plan... Uprooting</h1>
+<p style="text-align:center;"><span class="hk p">"Uprooting the place with everyone in it – not out of hate – but peace."</span></p>
+<div class="twocol" style="margin-top:2mm;">
+  <div>
+    <h2 class="s" style="color:#c62828;">I left behind:</h2>
+    <ul><li>Continuous nagging</li>
+    <li>The classic mentality that wants me to accept excuses and whims</li>
+    <li>Deadly disappointment of the soul</li></ul>
+  </div>
+  <div>
+    <h2 class="s" style="color:#2e7d32;">And I searched for:</h2>
+    <ul><li>My inner peace</li>
+    <li>Different thinking</li>
+    <li>My dignity</li></ul>
+  </div>
+</div>
+<p style="text-align:center; margin:2.5mm 0;"><span class="hk p">"I left the chains of job slavery not because I hate people, but because I love my inner peace."</span><br>
+<span class="hk p">"I didn't leave to punish anyone. I left to save myself."</span></p>
+<img class="st" style="top:150mm;left:10mm;width:46mm;transform:rotate(-4deg)" src="assets/img007.png">
+<div class="keylbl" style="position:absolute; top:144mm; left:12mm;">✎ key: break free · inner peace · walk on</div>
+<img class="st" style="top:152mm;right:12mm;width:40mm;transform:rotate(6deg)" src="assets/img008.png">
+<div style="margin-top:52mm;">
+  <h2 class="s">Searching for an Open Field</h2>
+  <p><span class="hk o">"I search for an open field that guarantees flying, because walls taught me how to suffocate, not how to live."</span></p>
+  <p>The idea is still alive with conviction.</p>
+</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>3 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 4: Atmosphere -->
+<div class="page"><div class="sheet">
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">Page 3: The Atmosphere I Left</h1>
+<p style="text-align:center;"><span class="hk o">"The work atmosphere was full of motivation, activity, and productivity. But it was also full of replicated copies of the one who disappointed me. They were planted there, present, multiplying."</span></p>
+<p>Every day, the atmosphere created images that repeated in my mind.<br>Images that activated wounds.<br>Wounds that hadn't healed yet.</p>
+<h2 class="s">Why Complete Withdrawal?</h2>
+<p>It's not just a job. It's a place, a culture, a system that reproduces disappointment.</p>
+<p style="text-align:center;"><span class="hk g">"Uprooting wasn't escape. It was a conviction that staying meant living with activated wounds every day."</span></p>
+<img class="st" style="top:128mm;right:10mm;width:48mm;transform:rotate(5deg)" src="assets/img009.png">
+<div class="keylbl" style="position:absolute; top:122mm; right:14mm;">✎ key: look closer · repeated copies · still standing</div>
+<img class="st" style="top:130mm;left:10mm;width:44mm;transform:rotate(-5deg)" src="assets/img010.png">
+<div class="keylbl" style="position:absolute; top:158mm; left:12mm;">✎ key: the copies — same shape, same smile</div>
+<img class="st" style="bottom:20mm;right:16mm;width:30mm;transform:rotate(8deg);opacity:.96" src="assets/img011.png">
+<div class="keylbl" style="position:absolute; bottom:14mm; right:14mm;">✎ first smile of the show — watch it repeat</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>4 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 5: Trying to Get Myself Back -->
+<div class="page"><div class="sheet">
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">Page 4: Trying to Get Myself Back</h1>
+<p>I used to sleep among my compositions – writing, sketching, coloring, puzzles. For hours without interruption, with an indescribable feeling.</p>
+<p>Then life squeezed everything into minutes and suffocation.</p>
+<p><span class="hk y">"My spaces must be equal to or bigger than my jumps – but even small spaces now choke me."</span></p>
+<h2 class="s">I'm trying to return to:</h2>
+<p style="font-size:14px;">✍️ Writing &nbsp;&nbsp; 🎨 Sketching &nbsp;&nbsp; 🖍️ Coloring &nbsp;&nbsp; 🧩 Puzzles &nbsp;&nbsp; ✏️ Sketchy &nbsp;&nbsp; 🏊 Swimming</p>
+<p><span class="hk v">"These were identities that were me."</span><br>
+<span class="hk b">"Even the air had the smell of pain. But I'm still here, still trying, still believing the idea is alive."</span></p>
+<h2 class="s">Scattered Puzzle Pieces</h2>
+<p>Scattered – but coming back.<br>Hours before ← Minutes now &nbsp;·&nbsp; But the idea is still alive. 💙</p>
+<img class="st" style="top:96mm;right:12mm;width:52mm;transform:rotate(4deg)" src="assets/img012.png">
+<div class="keylbl" style="position:absolute; top:90mm; right:16mm;">✎ key: rest was part of the lab</div>
+<img class="st" style="top:150mm;left:10mm;width:34mm;transform:rotate(-7deg)" src="assets/img013.png">
+<img class="st" style="top:146mm;left:44mm;width:34mm;transform:rotate(6deg)" src="assets/img014.png">
+<div class="keylbl" style="position:absolute; top:178mm; left:14mm;">✎ key: scattered pieces — coming back together</div>
+<img class="st" style="bottom:16mm;right:14mm;width:34mm;transform:rotate(-4deg)" src="assets/img015.png">
+<div class="keylbl" style="position:absolute; bottom:12mm; right:12mm;">✎ key: read rise</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>5 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 6: Action Plan -->
+<div class="page"><div class="sheet">
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">Page 5: Action Plan: Creative Spaces</h1>
+<div style="text-align:center; margin-bottom:2mm;"><span class="ribbon">( No time or hour constraints )</span></div>
+<div class="goalbox">
+  <h2 class="s">🌀 Goal 1: Discovery — search for what fits my personality and adds creative space.</h2>
+  <p><span class="hk o">"Tornado full of explosions – not a small breeze."</span><br>What I will do: study inspiring leaders · try different paths · allow creative explosions · trust what fits me, not what's expected.</p>
+</div>
+<div class="goalbox">
+  <h2 class="s">🧠 Goal 2: Crowded Mind — find different thinking that renews internal structure.</h2>
+  <p><span class="hk b">"Pull me from the surroundings, from against myself to with myself. Turn distraction into a tool."</span><br>What I will do: practice different perspectives daily · build an internal sanctuary · use noise as raw material, not as an enemy.</p>
+  <p style="text-align:center;"><span class="hk g">"We all fall. We are all human."</span></p>
+</div>
+<div class="goalbox">
+  <h2 class="s">🛠️ Goal 3: Increase Toolkit — from traditional to beloved madness.</h2>
+  <p><span class="hk y">"Spaces must be equal to or bigger than jumps."</span><br>What I will do: build tools that support big jumps · keep the flame alive · lift others along the way.</p>
+  <p><span class="hk p">"My lab, my rules. Music is a space where jumps live. Uproot with love, not hate."</span></p>
+</div>
+<p class="small" style="margin-top:1.5mm;">One of the tools I have added consciously and with conviction: A psychological tool – to take control of the source, the essence, or the negative cluster that had taken so much from me. Through complete acceptance of the intellectual and psychological levels of humans – the near, the far, or the very, very far from perfection. We do not reach it, no matter how hard we try. And after that acceptance, I took the decision to begin. And here I am writing it now, with the same pen that once drew the ugliest picture of disappointment.</p>
+<img class="st" style="top:118mm;right:10mm;width:34mm;transform:rotate(6deg)" src="assets/img016.png">
+<div class="keylbl" style="position:absolute; top:112mm; right:14mm;">✎ key: wonder</div>
+<img class="st" style="top:168mm;right:14mm;width:34mm;transform:rotate(-5deg)" src="assets/img017.png">
+<img class="st" style="top:118mm;left:8mm;width:34mm;transform:rotate(-4deg)" src="assets/img018.png">
+<img class="st" style="top:162mm;left:8mm;width:32mm;transform:rotate(3deg)" src="assets/img019.png">
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>6 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 7: Connecting A1 & A2 -->
+<div class="page"><div class="sheet">
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">Page 6: Connecting Assignment 1 &amp; Assignment 2</h1>
+<p>When I wrote my goals in Assignment 1, I was drawing a map for myself. Now, in Assignment 2, I see how that map turned into a path I walk.</p>
+<div class="goalbox">
+  <h2 class="s">Goal 1: Discovery</h2>
+  <p class="small" style="color:#37474f;">In Assignment 1, I wanted to discover what I don't know, and to search for leaders like a tornado, to find what fits me not what they told me fits.<br>In Assignment 2, this goal turned into a clear plan: searching for creative spaces that suit my personality, allowing myself to explode like a tornado, not like a small breeze. The three leaders became a model I draw inspiration from, not faces I follow.</p>
+</div>
+<div class="goalbox">
+  <h2 class="s">Goal 2: Crowded Mind</h2>
+  <p class="small" style="color:#37474f;">In Assignment 1, I wanted to renew my internal structure, and pull myself from the noise to myself.<br>In Assignment 2, this turned into a real tool: a crowded but organized mind, different thinking that experiments and looks from new angles, and distraction that became raw material I transform into production, not an enemy I run from. I became with myself, not against myself.</p>
+</div>
+<div class="goalbox">
+  <h2 class="s">Goal 3: Toolkit</h2>
+  <p class="small" style="color:#37474f;">In Assignment 1, I wanted to move from traditional to beloved madness, and build tools that love my craziness.<br>In Assignment 2, this turned into a real lab: new tools I write with, sketch, color, and play, restoring the identities I lost, and giving me the strength for big jumps. Beloved madness became part of my routine, not a passing whim.</p>
+</div>
+<h2 class="s">And the Story... Was the Bridge</h2>
+<p class="small" style="color:#37474f;">Between the goal and its plan, the story stood. Old disappointment awakened by new disappointment, air with the smell of pain, and a repeated bottom. But it didn't distract me. It reminded me why these goals and this plan exist. In every goal, there was disappointment trying to stop me. In every plan, there was uprooting trying to free me.</p>
+<p style="text-align:center;"><span class="hk v">"Assignment 1 was about what I want. Assignment 2 was about how I will achieve it. And the story was about why."</span></p>
+<img class="st" style="top:96mm;right:10mm;width:30mm;transform:rotate(6deg)" src="assets/img020.png">
+<div class="keylbl" style="position:absolute; top:90mm; right:13mm;">✎ key: every piece connects</div>
+<img class="st" style="top:150mm;right:12mm;width:32mm;transform:rotate(-5deg)" src="assets/img021.png">
+<img class="st" style="top:196mm;right:16mm;width:24mm;transform:rotate(8deg)" src="assets/img022.png">
+<div class="keylbl" style="position:absolute; bottom:14mm; right:12mm;">✎ key: the bridge — goals → plan → why</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>7 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 8: No One Perfect -->
+<div class="page"><div class="sheet">
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">Page 7: No One Perfect Except God</h1>
+<p style="text-align:center;"><span class="hk v">Perfection Belongs to God Only</span></p>
+<p>I used to think disappointment was a personal failure, something shameful to hide. I used to call it something else before, but I was wrong. It was disappointment. Contagious. Heavy.</p>
+<p style="text-align:center;"><span class="hk g">"We all fall. We are all human. From one tired soul to another in places full of repeated copies."</span></p>
+<h2 class="s">Human</h2>
+<p><span class="hk b">"We are human, saturated with a very sensitive network of emotions, capable of being torn, severed, or damaged."</span><br><span class="hk y">"That straw broke something inside me. But it didn't end me."</span></p>
+<h2 class="s">Why Perfection is Boring</h2>
+<p><span class="hk o">"If we were perfect, we wouldn't need spaces bigger than our jumps. We wouldn't need to uproot. We wouldn't need to create in our lab a space for our drawings and games. We wouldn't need to play piano until hair flies."</span></p>
+<h2 class="s">Reminder</h2>
+<p style="text-align:center;"><span class="hk g">"We all fall. We are all human. Even the air had the smell of pain once. But pain is not our home. The open field is our home."</span></p>
+<img class="st" style="top:118mm;right:10mm;width:42mm;transform:rotate(5deg)" src="assets/img023.png">
+<div class="keylbl" style="position:absolute; top:112mm; right:14mm;">✎ key: gentle eyes see further</div>
+<img class="st" style="top:120mm;left:8mm;width:36mm;transform:rotate(-6deg)" src="assets/img024.png">
+<div class="keylbl" style="position:absolute; top:156mm; left:10mm;">✎ key: read rise</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>8 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 9: Conclusion + Gate -->
+<div class="page"><div class="sheet">
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<div style="font-size:11.3px; line-height:1.72; width:128mm;">
+<h1 class="t" style="font-size:24px;">Page 8: Conclusion... The Smell of Disappointment Returns, with the Same Taste, and Rigidity is the Reason</h1>
+<p>Not all disappointment is forgotten. Some of it lives in the details, reshaping the scene, making the air itself carry the smell of pain.</p>
+<p><b>That old disappointment...</b> taught me that appearances don't reflect essence, that elegant covers may hide an immeasurable weight. Taught me that the straw, with its triviality and cheap weight, can be enough to break what remains of a soul. And taught me that existence at the bottom was not my choice, but a decision made by others.</p>
+<p><b>Then came another disappointment...</b> It was not different. It was the same smell, the same taste, the same rigidity that made the pain repeat. It came at a time when I thought wounds had healed, and in a place I thought was a space for learning and building. But it rearranged the scene, and summoned images I thought I had moved past. That new disappointment... had the same taste, the same hole it makes in the chest, and the same feeling that there were those who agreed, conspired, and executed, while I discovered it too late. And the bottom was there too... Not like the first bottom, but similar. A new bottom, with new faces, but carrying the same smell, the same taste, the same rigidity.</p>
+<p style="text-align:center;"><span class="hk b">"Even the air had the smell of pain."</span></p>
+<p><b>But the difference this time...</b> I am no longer the one who breaks. I am no longer the one who accepts excuses and whims, and coexists with deadly disappointment. I came to know: <span class="hk y">spaces must be equal to or bigger than jumps</span>. And I came to know that uprooting is not hate, but peace. Not escape, but conviction.</p>
+<p><b>That giving soul...</b> that gave repeatedly, and expected loyalty, and found disappointment. That tried repeatedly, and expected fairness, and found disappointment. That found itself at the bottom twice, and each time rigidity was the reason. It no longer waits. It no longer accepts.</p>
+<p><b>Uprooting the place with everyone in it...</b> not because I hate, but because I love my inner peace more than anything. I left what doesn't resemble me, what doesn't resemble my soul, and what doesn't resemble my giving.</p>
+<p style="text-align:center;"><span class="hk p">"I uprooted with love, not hate."</span></p>
+<p><b>And here I am leaving...</b> not with noise, but with a silence that chokes more than words. Not with confrontation, but with an absence that leaves a void that cannot be filled. Because the greatest message a tired soul can leave, a soul tired of giving, is to walk away quietly, leaving behind one question: <b>Was it worth it?</b> A question that needs no answer. Because regret will come, late, heavy, like that straw that broke the soul one day. It will come when they realize they lost a soul that was a treasure. And then, the impact will be complete.</p>
+</div>
+<img class="st" style="top:34mm;right:10mm;width:36mm;transform:rotate(5deg)" src="assets/img025.png">
+<div class="keylbl" style="position:absolute; top:29mm; right:12mm;">✎ key: rigidity — the same taste, again</div>
+<img class="st" style="top:66mm;right:12mm;width:34mm;transform:rotate(-6deg)" src="assets/img026.png">
+<div class="keylbl" style="position:absolute; top:98mm; right:12mm;">✎ key: a rehearsed smile — the show</div>
+<div class="note" style="position:absolute; bottom:16mm; left:16mm; width:120mm;">
+  <h3>Page 9: The Story That Drove Everything</h3>
+  <p>"If you have time, this is the story that awakened the goals, gave meaning to the words, and gave the decision its power."</p>
+</div>
+<img class="st" style="bottom:14mm;right:14mm;width:42mm;transform:rotate(6deg)" src="assets/img027.png">
+<img class="st" style="bottom:16mm;right:62mm;width:30mm;transform:rotate(3deg)" src="assets/img028.png">
+<svg style="position:absolute; bottom:30mm; right:60mm; z-index:4;" width="70" height="60" viewBox="0 0 70 60">
+  <path d="M6,10 C30,4 48,16 58,40" fill="none" stroke="#c62828" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="58,40 42,34 48,52" fill="#c62828"/>
+</svg>
+<div class="keylbl" style="position:absolute; bottom:52mm; right:52mm; font-size:11px;">🎫 the gate — enter if you dare</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>9 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 10: Story 1/4 -->
+<div class="page"><div class="sheet">
+<svg class="bunt" viewBox="0 0 624 26" preserveAspectRatio="none"><path d="M0,6 Q312,26 624,6" fill="none" stroke="#555" stroke-width="2"/><polygon points="0,22 13,2 26,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="26,22 39,2 52,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="52,22 65,2 78,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="78,22 91,2 104,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="104,22 117,2 130,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="130,22 143,2 156,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="156,22 169,2 182,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="182,22 195,2 208,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="208,22 221,2 234,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="234,22 247,2 260,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="260,22 273,2 286,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="286,22 299,2 312,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="312,22 325,2 338,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="338,22 351,2 364,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="364,22 377,2 390,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="390,22 403,2 416,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="416,22 429,2 442,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="442,22 455,2 468,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="468,22 481,2 494,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="494,22 507,2 520,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="520,22 533,2 546,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="546,22 559,2 572,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="572,22 585,2 598,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="598,22 611,2 624,22" fill="#ba68c8" stroke="#333" stroke-width="1"/></svg>
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t" style="text-align:center;">Page 9: The Story That Drove Everything</h1>
+<p class="small" style="text-align:center; color:#6a1b9a;">"If you have time, this is the story that awakened the goals, gave meaning to the words, and gave the decision its power."</p>
+<p style="margin-top:2mm;">Not all human goals, even if they are many, are one. Nor do all the elegant titles of refined covers reflect what is inside them. Nor the heaviness of steps and their slowness, and accepting what is said directly without thinking, and going against their principles and nature – because they saw in the speaker something of successful intelligence and they wanted it.</p>
+<p>In that exaggerated focus, and those confused features, and that submissive surrendered obedience, there is a weight with no measure.</p>
+<p>A word she heard took her to a time torn by pain. Perhaps a look she saw from one who underestimated or belittled her, or perhaps an idea that confirmed that resemblance, took her to reflect on how one could dare to crush her while fully knowing who she truly is.</p>
+<img class="st" style="top:96mm;right:10mm;width:52mm;transform:rotate(7deg)" src="assets/img029.png">
+<img class="st" style="top:150mm;left:8mm;width:42mm;transform:rotate(-6deg)" src="assets/img030.png">
+<img class="st" style="bottom:18mm;right:18mm;width:38mm;transform:rotate(-5deg)" src="assets/img031.png">
+<img class="st" style="bottom:17mm;right:52mm;width:36mm;transform:rotate(3deg)" src="assets/img032.png">
+<div class="keylbl" style="position:absolute; top:90mm; right:16mm;">✎ the welcome — wide arms, loud colors</div>
+<div class="keylbl" style="position:absolute; bottom:13mm; right:16mm;">✎ the painted smile — look closer</div>
+<img class="st" style="top:118mm;left:34mm;width:70mm;opacity:.10;transform:rotate(-8deg)" src="assets/img001.png">
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>10 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 11: Story 2/4 -->
+<div class="page"><div class="sheet">
+<svg class="bunt" viewBox="0 0 624 26" preserveAspectRatio="none"><path d="M0,6 Q312,26 624,6" fill="none" stroke="#555" stroke-width="2"/><polygon points="0,22 13,2 26,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="26,22 39,2 52,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="52,22 65,2 78,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="78,22 91,2 104,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="104,22 117,2 130,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="130,22 143,2 156,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="156,22 169,2 182,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="182,22 195,2 208,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="208,22 221,2 234,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="234,22 247,2 260,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="260,22 273,2 286,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="286,22 299,2 312,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="312,22 325,2 338,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="338,22 351,2 364,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="364,22 377,2 390,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="390,22 403,2 416,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="416,22 429,2 442,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="442,22 455,2 468,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="468,22 481,2 494,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="494,22 507,2 520,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="520,22 533,2 546,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="546,22 559,2 572,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="572,22 585,2 598,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="598,22 611,2 624,22" fill="#ba68c8" stroke="#333" stroke-width="1"/></svg>
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">The Story... <span class="small">(cont.)</span></h1>
+<p>My noble reader, what killed her internal programming was heavier upon her than material calculations or logical goals. And what the one who threw an idea shows, imagining he hit the depth of the unconscious mind, arrogant in what he memorized, condescending in his conclusions – is nothing but an unconscious response from a tangled, exhausted mind that wants a straw, wants an idea, wants an escape from itself.</p>
+<p style="text-align:center; font-size:15px;"><b>And it was done.</b></p>
+<p>When you spoke about perfection, every sigh and every smile from you carved its way to me truthfully, and I am certain it was for everyone as well. And the pleasure in that, as you mentioned, my generous leader, has other doors that are felt and would take long to explain.</p>
+<p>Among the most refined and highest pleasures in attempts to arrive and in unconscious striving – that pleasure which shows you the reactions that the mind recorded and categorized in the same moment they were frozen.</p>
+<p><b>And at the bottom, where everyone wished for her, there she was</b>, in her apparent comfort that covered dunes of cold, provoking helplessness, with strange contradictions. And she was searching for that hope hanging on that straw, found in bottoms scheduled in a pattern of invisible challenge, intertwined with human animal instincts, quenching the animality of instincts for every participant in the play of stripping. Some had already reached their goal and ended with a comfortable, balanced smile the scene of puppets in their final, live show, with goals carefully studied and executed precisely in every direction.</p>
+<img class="st" style="top:98mm;right:12mm;width:44mm;transform:rotate(6deg)" src="assets/img033.png">
+<img class="st" style="top:96mm;left:10mm;width:40mm;transform:rotate(-6deg)" src="assets/img034.png">
+<img class="st" style="bottom:16mm;left:14mm;width:42mm;transform:rotate(4deg)" src="assets/img035.png">
+<img class="st" style="bottom:14mm;right:14mm;width:34mm;transform:rotate(-5deg)" src="assets/img036.png">
+<div class="keylbl" style="position:absolute; bottom:11mm; left:16mm;">✎ the play — keep them laughing</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>11 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 12: Story 3/4 -->
+<div class="page"><div class="sheet">
+<svg class="bunt" viewBox="0 0 624 26" preserveAspectRatio="none"><path d="M0,6 Q312,26 624,6" fill="none" stroke="#555" stroke-width="2"/><polygon points="0,22 13,2 26,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="26,22 39,2 52,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="52,22 65,2 78,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="78,22 91,2 104,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="104,22 117,2 130,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="130,22 143,2 156,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="156,22 169,2 182,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="182,22 195,2 208,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="208,22 221,2 234,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="234,22 247,2 260,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="260,22 273,2 286,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="286,22 299,2 312,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="312,22 325,2 338,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="338,22 351,2 364,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="364,22 377,2 390,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="390,22 403,2 416,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="416,22 429,2 442,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="442,22 455,2 468,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="468,22 481,2 494,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="494,22 507,2 520,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="520,22 533,2 546,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="546,22 559,2 572,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="572,22 585,2 598,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="598,22 611,2 624,22" fill="#ba68c8" stroke="#333" stroke-width="1"/></svg>
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">The Story... <span class="small">(cont.)</span></h1>
+<p>At the bottom, at the level of studied belittlement meant to break her and humiliate her, she appeared in that image that reflected contradiction in its most vivid form – for what the eyes see is not what the soul holds.</p>
+<p>At that time, she was swimming in her imagination, seeing in that straw what might revive her soul in its first version, full of meanings that cannot be written – from the passion of birds, the playfulness of cats, the trotting of that loyal one. She even saw it as a butterfly carrying life with its spirit.</p>
+<p><b>At that moment, the moment of the straw had arrived</b> with specific timing, voice messages targeting her at the bottom, live events, and known clauses, understood and agreed upon and enjoyed by an audience full of a platform directed with a title worthy of her and her presence, and with a bestial, instinctive ecstasy to grind the remaining crumbs of her at the bottom, where her location had been decided.</p>
+<p>That straw, with its cheapness and triviality, was guaranteed to break the core of that soul, which had only needed what it heard to imprison itself at the bottom, with an inexplicable rigidity.</p>
+<p>Signals conflicted, and the voice that was screaming inside her, warning her of approaching harm equal to that tearing, that disappointment. The rigidity increased, and with it came the arrogance of rejecting all signals, so awareness had to place a mark on its resentment, to expand with it understanding, the depth of pain, and its memories.</p>
+<p>When she saw those looks, belittling and humiliating, translated by her animal instinct into incomprehensible deceit, she did not see them, nor did she want to comprehend them. She was witnessing a scene of disappointment with the same taste, the same smell, and the same poisoned dagger.</p>
+<p>It led her at that time, and continued with her with a coldness more damaged than it is now, to the sanctuary of inner peace. Coldness was the master of the situation, which the sanctuary of inner peace had taken care of, and she marveled at its ability to control.</p>
+<p>The scene of belittlement, wasting dignity, and feelings hung by their own will ended, unfortunately. But the shock of the mined blow had begun to respond to a massive flow of sensory and visual images.</p>
+<p style="text-align:center;"><span class="hk b">I did not truly realize that there is a continuous pain in presence and absence, in wakefulness and sleep. A pain that changes colors, shapes, the taste of every delicious thing, and the smell of everything that used to please... until even the air had the smell of pain.</span></p>
+<img class="st" style="top:96mm;right:10mm;width:40mm;transform:rotate(5deg)" src="assets/img037.png">
+<img class="st" style="top:150mm;left:10mm;width:34mm;transform:rotate(-6deg)" src="assets/img038.png">
+<div class="pola" style="bottom:16mm;left:12mm;width:38mm;transform:rotate(3deg)"><img src="assets/img039.png"><div class="cap">the audience — enjoying the show</div></div>
+<img class="st" style="bottom:14mm;right:12mm;width:34mm;transform:rotate(-4deg)" src="assets/img040.png">
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>12 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 13: Story 4/4 -->
+<div class="page"><div class="sheet">
+<svg class="bunt" viewBox="0 0 624 26" preserveAspectRatio="none"><path d="M0,6 Q312,26 624,6" fill="none" stroke="#555" stroke-width="2"/><polygon points="0,22 13,2 26,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="26,22 39,2 52,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="52,22 65,2 78,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="78,22 91,2 104,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="104,22 117,2 130,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="130,22 143,2 156,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="156,22 169,2 182,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="182,22 195,2 208,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="208,22 221,2 234,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="234,22 247,2 260,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="260,22 273,2 286,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="286,22 299,2 312,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="312,22 325,2 338,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="338,22 351,2 364,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="364,22 377,2 390,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="390,22 403,2 416,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="416,22 429,2 442,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="442,22 455,2 468,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="468,22 481,2 494,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="494,22 507,2 520,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="520,22 533,2 546,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="546,22 559,2 572,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="572,22 585,2 598,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="598,22 611,2 624,22" fill="#ba68c8" stroke="#333" stroke-width="1"/></svg>
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<h1 class="t">The Story... <span class="small">(cont.)</span></h1>
+<p>So the idea of perfection had a pictorial presence in my imagination, and when you uttered that there is no perfection except His Face, Glory be to Him, I found that we are all humans. Those who were in the orchestrated show – all humans. I too am a human. By what scale are they weighed, and who led them in that, and how was the flow of the image, and how was the judgment announced against me and issued and agreed upon and executed – it is nothing but human minds that I cannot and dare not classify because they are simply human, and because there is no perfection except for God alone.</p>
+<p>I found that in the years of developing yourself, my generous leader, you were striving to harness what distracts your productivity by controlling it and making it a tool that helps you in development and success, and in that is a strength and will that an ordinary person cannot muster.</p>
+<p>Some may see arrogance in my description, may sense a reply in it, but believe me this is truly me... Yes, the human who cannot reach perfection, the one full of a neural network governed by precise centers in the brain that may be damaged in a second by a shock from a human of the size and weight of a straw – I lifted him and valued him, so he betrayed and belittled and underestimated. But with all honesty, after all experiences and levels of pain, I feel pity for those for whom it is easy to defame or hurt a person who may regret hurting someone who does not deserve to be hurt. How does he continue in life as if nothing happened? How does he sleep peacefully and enjoy the company of his loved ones truthfully while there is someone who was exhausted because of him?</p>
+<p>I could not get over these feelings after hearing that tone in the layers of your voice and delivering the elegant philosophy of perfection and the pleasure in it – and what you mean may be completely different, yet it widened my horizons and took me to a sharp angle where I sensed its details and found in it part of that pleasure in the heart of painful feelings, for transcendence and elevation and rising of thought – an understanding that is not instincts but depth of intellectual space and belief in destiny and rising above translating intentions and translating what is behind reactions or spontaneous positivity.</p>
+<p>My leader whom I am proud to be a student in your ranks, your honest words crystallized the idea and completed the cycle of its comprehension and its practice consciously, without injustice to yourself nor cancellation of it, and choosing what suits its peace and its status and acknowledging that you may one day prove that you are only human just as they proved in their arena and their place and under their control and their judgment and their perception.</p>
+<p>And with complete conviction, I have added this psychological tool to control the source, the essence, or the negative cluster that had taken so much from me. Through complete acceptance of the intellectual and psychological levels of humans – the near, the far, or the very, very far from perfection. We do not reach it, no matter how hard we try. And after that acceptance, I took the decision to begin. And here I am writing it now, with the same pen that once drew the ugliest picture of disappointment.</p>
+<img class="st" style="top:96mm;right:10mm;width:38mm;transform:rotate(6deg)" src="assets/img041.png">
+<img class="st" style="top:120mm;left:30mm;width:80mm;opacity:.12;transform:rotate(6deg)" src="assets/img001.png">
+<img class="st" style="top:170mm;left:10mm;width:36mm;transform:rotate(-6deg)" src="assets/img042.png">
+<div class="pola" style="bottom:16mm;left:12mm;width:34mm;transform:rotate(4deg)"><img src="assets/img043.png"><div class="cap">the smile fades — the mask stays</div></div>
+<div class="pola" style="bottom:14mm;right:12mm;width:36mm;transform:rotate(-3deg)"><img src="assets/img044.png"><div class="cap">the show goes on... without her</div></div>
+<div class="keylbl" style="position:absolute; top:91mm; right:14mm;">✎ behind the paint — nothing human left</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>13 / 14</b></span></div>
+</div></div>
+
+<!-- PAGE 14: Finale -->
+<div class="page"><div class="sheet">
+<svg class="bunt" viewBox="0 0 624 26" preserveAspectRatio="none"><path d="M0,6 Q312,26 624,6" fill="none" stroke="#555" stroke-width="2"/><polygon points="0,22 13,2 26,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="26,22 39,2 52,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="52,22 65,2 78,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="78,22 91,2 104,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="104,22 117,2 130,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="130,22 143,2 156,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="156,22 169,2 182,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="182,22 195,2 208,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="208,22 221,2 234,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="234,22 247,2 260,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="260,22 273,2 286,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="286,22 299,2 312,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="312,22 325,2 338,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="338,22 351,2 364,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="364,22 377,2 390,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="390,22 403,2 416,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="416,22 429,2 442,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="442,22 455,2 468,22" fill="#ba68c8" stroke="#333" stroke-width="1"/><polygon points="468,22 481,2 494,22" fill="#ef5350" stroke="#333" stroke-width="1"/><polygon points="494,22 507,2 520,22" fill="#ffb74d" stroke="#333" stroke-width="1"/><polygon points="520,22 533,2 546,22" fill="#fff176" stroke="#333" stroke-width="1"/><polygon points="546,22 559,2 572,22" fill="#81c784" stroke="#333" stroke-width="1"/><polygon points="572,22 585,2 598,22" fill="#64b5f6" stroke="#333" stroke-width="1"/><polygon points="598,22 611,2 624,22" fill="#ba68c8" stroke="#333" stroke-width="1"/></svg>
+<div class="hdr"><img class="st" style="width:11mm;opacity:.9;margin-left:2mm;vertical-align:middle" src="assets/img001.png"><span class="hdrtxt">Leadership School Program &nbsp;·&nbsp; MASTER CLASS &nbsp;·&nbsp; Leader Shadi</span></div>
+<img class="st" style="top:40mm;left:26mm;width:34mm;opacity:.13" src="assets/img001.png">
+<img class="st" style="top:26mm;right:20mm;width:30mm;transform:rotate(8deg);opacity:.95" src="assets/img045.png">
+<div style="text-align:center; margin-top:16mm; position:relative; z-index:2;">
+  <div class="small" style="font-size:14px; color:#37474f;">Keep the Journey Going</div>
+  <div style="font-family:'Caveat'; font-weight:700; font-size:56px; color:#1a237e; letter-spacing:1px; text-shadow:2px 3px 0 rgba(0,0,0,.10);">ROLL WITH FREEDOM</div>
+  <div style="font-size:16px; color:#c62828; font-weight:700;">Lightweight. Fast. Unstoppable.</div>
+</div>
+<img class="st" style="top:88mm;left:14mm;width:44mm;transform:rotate(-6deg)" src="assets/img046.png">
+<img class="st" style="top:92mm;right:14mm;width:42mm;transform:rotate(6deg)" src="assets/img047.png">
+<div style="position:absolute; top:150mm; left:20mm; right:20mm; text-align:center; z-index:2;">
+  <p style="font-size:20px;"><span class="hk y">"My spaces must be equal to or bigger than my jumps."</span></p>
+  <p class="small" style="margin-top:2mm;">Limits don't attract me. Small spaces choke big souls.<br>The open field is home. Uproot with love, not hate. 💙</p>
+  <div style="margin-top:8mm;">
+    <span class="sig">~ Latifa</span><br>
+    <span style="font-family:'Caveat'; font-size:18px; color:#455a64;">Trainee – Leader Shadi</span>
+  </div>
+</div>
+<img class="st" style="bottom:20mm;left:24mm;width:40mm;transform:rotate(-5deg)" src="assets/img048.png">
+<img class="st" style="bottom:18mm;right:22mm;width:36mm;transform:rotate(5deg)" src="assets/img049.png">
+<div class="keylbl" style="position:absolute; bottom:14mm; left:50%; transform:translateX(-50%) rotate(-1deg);">✎ key: the mask stays with the show — she walks free</div>
+<div class="ftr"><span class="fl">Trainee&nbsp;Latifah&nbsp;Almutairi &nbsp;·&nbsp; Saturday&nbsp;Sep&nbsp;5&nbsp;2026 &nbsp;·&nbsp; 9:15&nbsp;PM</span><span class="fr">Latifah Almutairi &nbsp;·&nbsp; Assignment 2 for Leader Shadi &nbsp;·&nbsp; Leadership School Program &nbsp;—&nbsp; <b>14 / 14</b></span></div>
+</div></div>
+
+</body>
+</html>
