@@ -8,6 +8,7 @@ onto one object. This is lossless: no stream is recompressed or resampled.
 import sys, hashlib, pikepdf
 
 src, dst = sys.argv[1], sys.argv[2]
+LOSSLESS = "--lossless" in sys.argv[3:]   # keep every pixel; only dedupe
 pdf = pikepdf.open(src)
 
 seen, remap = {}, {}
@@ -51,6 +52,8 @@ for page in pdf.pages:
 import io
 from PIL import Image
 QUALITY, FLOOR = 92, 60_000
+if LOSSLESS:
+    FLOOR = 10**12          # nothing qualifies, so nothing is recompressed
 saved = shrunk = 0
 for obj in pdf.objects:
     try:

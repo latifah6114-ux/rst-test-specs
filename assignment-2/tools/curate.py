@@ -75,14 +75,14 @@ SLOTS = {
 
  # PAGE 11 — The Story 2/4
  "img033": ("sheet-37-13", "the tangled, exhausted mind"),
- "img034": ("sheet-87-12", "arrogant in what he memorized"),
+ "img034": ("sheet-11-10", "arrogant in what he memorized"),
  "img035": ("sheet-77-07", "the play — keep them laughing"),
  "img036": ("sheet-11-18", "the puppets in their final live show"),
 
  # PAGE 12 — The Story 3/4
- "img037": ("sheet-87-09", "studied belittlement"),
+ "img037": ("sheet-02-16", "studied belittlement"),
  "img038": ("sheet-11-02", "what the eyes see is not what the soul holds"),
- "img039": ("sheet-87-19", "the audience — enjoying the show"),
+ "img039": ("sheet-37-17", "the audience — enjoying the show"),
  "img040": ("sheet-87-08", "the poisoned dagger, same taste"),
 
  # PAGE 13 — The Story 4/4
@@ -92,7 +92,7 @@ SLOTS = {
  "img044": ("sheet-02-04", "the show goes on... without her"),
 
  # PAGE 14 — Finale: ROLL WITH FREEDOM
- "img045": ("sheet-02-07", "lightweight, fast"),
+ "img045": ("sheet-37-14", "lightweight, fast"),
  "img046": ("sheet-87-04", "the mask stays with the show"),
  "img047": ("sheet-77-03", "...she walks free"),
  "img048": ("sheet-02-06", "the open field is home"),

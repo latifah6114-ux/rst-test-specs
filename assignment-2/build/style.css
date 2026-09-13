@@ -306,3 +306,12 @@ img[data-missing]{ visibility:hidden; }
   html, body{ background:#fff; }
   .page{ margin:0; box-shadow:none; }
 }
+
+/* ---------- clipboard fidelity --------------------------------------------
+   Chromium paints a text-shadow by drawing the glyphs a second time, and both
+   draws land in the PDF's text stream — so a shadowed headline copies out
+   doubled: "RROOLLLL WWIITTHH FFRREEEEDDOOMM". The two display headlines carry
+   only a 10–12% black offset that is barely visible against cream paper, so
+   dropping it costs nothing on the page and makes the whole document copy
+   cleanly. The markup itself is untouched; this is an override. */
+[style*="text-shadow"]{ text-shadow:none !important; }
