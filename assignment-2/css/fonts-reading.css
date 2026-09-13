@@ -1,0 +1,50 @@
+/* EB Garamond for the reading edition's text, plus the Caveat hand kept for
+   display so both editions still read as the same work. */
+
+@font-face{
+  font-family:'EB Garamond';
+  font-style:normal;
+  font-weight:400;
+  font-display:block;
+  src:url('../fonts/EBGaramond-400.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'EB Garamond';
+  font-style:italic;
+  font-weight:400;
+  font-display:block;
+  src:url('../fonts/EBGaramond-400i.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'EB Garamond';
+  font-style:normal;
+  font-weight:600;
+  font-display:block;
+  src:url('../fonts/EBGaramond-600.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'EB Garamond';
+  font-style:italic;
+  font-weight:600;
+  font-display:block;
+  src:url('../fonts/EBGaramond-600i.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Caveat';
+  font-style:normal;
+  font-weight:600;
+  font-display:block;
+  src:url('../fonts/Caveat-600.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Caveat';
+  font-style:normal;
+  font-weight:700;
+  font-display:block;
+  src:url('../fonts/Caveat-700.woff2') format('woff2');
+}

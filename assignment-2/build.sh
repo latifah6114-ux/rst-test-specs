@@ -15,7 +15,7 @@ export NODE_PATH="$NODE_MODULES"
 
 echo "1/5  assembling index.html from the approved master"
 : > build/layout.css
-python3 tools/build.py "$MASTER" build/fonts.css build/style.css index.html
+python3 tools/build.py "$MASTER" build/fonts.css css/master.css index.html
 
 echo "2/5  solving furniture placement against the rendered page"
 node tools/layout.mjs . build/layout.css
