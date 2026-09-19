@@ -15,8 +15,8 @@ css/fonts.css   → fonts/CaveatBrush-400.woff2
 assets/         the five images
 ```
 
-## The images
-All five were cut out of their backgrounds so they sit *on* the paper instead
+## The images (10)
+Ten images across the document. The cutouts were lifted off their backgrounds so they sit *on* the paper instead
 of arriving as white rectangles — the backdrop is masked only where it touches
 the frame edge, then un-multiplied out of the edge pixels so no halo is left.
 
@@ -24,8 +24,13 @@ the frame edge, then un-multiplied out of the edge pixels so no halo is left.
 |---|---|---|
 | `img_clown_hero.png` | P01 cover rail | cut from white |
 | `img_jester_purple.png` | P01 cover rail | cut from the transparency checkerboard |
+| `img_harlequin_queen.png` | P01 cover rail | chroma-keyed off flat magenta, then despilled |
 | `img_notebook_hat.jpg` | P02, beneath the yellow note | kept whole, shown as a taped-in print |
+| `img_harlequin_gothic.png` | P03, the naming layer | cut from white |
 | `img_harlequin_axis.png` | P10, Wave M | cut from white |
+| `img_protocol_notebook.jpg` | P12, the archive | kept whole — it *is* the protocol, WAVE_A→O |
+| `img_book_cap.jpg` | P13, the sources | kept whole, taped-in print |
+| `img_hair_key.png` | P16, the seal | cut from white; a Craiyon watermark painted out first |
 | `img_harlequin_red.png` | P16, the seal | cut from white |
 
 To swap one: drop a new file in `assets/` and change the `src`.
