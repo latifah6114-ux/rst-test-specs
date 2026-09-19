@@ -1,0 +1,123 @@
+/* ============================================================================
+   ASSIGNMENT 2 — THE PROGRAMMABLE MIND & THE UNBROKEN REFERENCE
+   Imperial Archive · Latifah Almutairi
+   Editable master. Every page is live markup; nothing is flattened.
+   ========================================================================== */
+:root{
+  --paper:#FFFEF7; --ink:#172033; --royal:#003399; --pink:#ad1457;
+  --coverRed:#b71c1c; --indigo:#1a237e; --thread:#b3202a;
+  --headerAccent:#e05252; --footer:#546e7a; --pageNum:#c62828;
+  --fieldBg:#fff8e1; --fieldBorder:#bcaaa4; --fieldText:#6d4c41;
+  --seagull:#8d6e63;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#ece6d6;min-height:100%}
+body{font-family:"Caveat Brush", cursive; font-weight:700; color:var(--ink); -webkit-font-smoothing:antialiased}
+@page{ size:210mm 297mm; margin:0 }
+.book{width:100%; display:flex; flex-direction:column; align-items:center; gap:12mm; padding:10mm 4mm}
+.page{
+  width:210mm; height:297mm; background:var(--paper);
+  border:2.5px solid #232323; border-radius:9mm;
+  box-shadow:0 2px 0 rgba(0,0,0,.06), 0 12px 30px rgba(60,40,20,.10);
+  position:relative; overflow:hidden; flex-shrink:0;
+  padding:5mm; isolation:isolate;
+}
+.inner{position:absolute; inset:5mm; overflow:hidden; border-radius:7mm}
+.header{
+  position:absolute; left:5mm; right:5mm; top:3mm; height:11mm;
+  border-bottom:2px solid var(--headerAccent);
+  display:flex; align-items:center; justify-content:space-between;
+  font-size:3.4mm; letter-spacing:.02em; z-index:5;
+}
+.footer{
+  position:absolute; left:6mm; right:6mm; bottom:2.5mm; height:7mm;
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:2.5mm; color:var(--footer); z-index:5;
+}
+.footer b{ color:var(--pageNum) }
+.footer-seagull{
+  display:inline-flex; align-items:center; gap:1.5mm;
+  color:var(--seagull); font-family:"Caveat Brush", cursive;
+  font-style:italic; font-size:2.6mm; letter-spacing:.04em;
+  opacity:.65; pointer-events:none;
+}
+.footer-seagull svg{ width:7px; height:16px; flex-shrink:0; opacity:.5 }
+.lane{position:absolute; left:6mm; top:0; bottom:0; width:13mm; opacity:.55; z-index:1}
+.lane-note{
+  writing-mode:vertical-rl; transform:rotate(180deg);
+  font-size:2.6mm; color:var(--seagull); letter-spacing:.08em;
+  position:absolute; left:2mm; top:30mm;
+}
+.redline{position:absolute; left:20mm; top:0; bottom:0; width:.45mm; background:var(--coverRed); opacity:.55; z-index:2}
+.main{position:absolute; left:25mm; top:18mm; bottom:12mm; width:155mm; z-index:3}
+.main-narrow{position:absolute; left:27mm; top:18mm; bottom:12mm; width:152mm; z-index:3}
+.companion{position:absolute; left:155mm; top:16mm; bottom:12mm; width:39mm; z-index:3}
+h1{font-size:16mm; line-height:1; color:var(--coverRed); text-align:center}
+h2{font-size:9mm; line-height:1.1; margin-bottom:4mm; text-align:center; color:var(--coverRed)}
+h3{font-size:5.5mm; margin:5mm 0 3mm; color:var(--indigo)}
+p{font-size:4.4mm; line-height:1.55; margin-bottom:3.5mm}
+.small{font-size:3.5mm; line-height:1.45}
+.tiny{font-size:2.9mm; line-height:1.35; color:var(--footer)}
+.center{text-align:center}
+.field{background:var(--fieldBg); border:1.2px solid var(--fieldBorder); color:var(--fieldText); border-radius:3mm; padding:3mm 4mm}
+.yellow-note{background:linear-gradient(180deg,#FFF59D,#fff27a); border:1px solid #e6d86a; border-radius:3mm; padding:5mm; box-shadow:1px 2px 0 rgba(0,0,0,.07)}
+.ribbon{display:inline-block; padding:1mm 4mm; border:1.2px solid #232323; border-radius:3mm; font-size:3.6mm; background:#fff}
+.wave-card{border:1.5px dashed var(--thread); border-radius:4mm; padding:5mm 5mm 4mm; margin-bottom:5mm; position:relative; background:linear-gradient(180deg, rgba(255,254,247,.7), transparent)}
+.wave-label{position:absolute; top:-3mm; left:5mm; background:#fff; padding:.5mm 3mm; border:1.2px solid var(--thread); border-radius:10mm; font-size:3mm; color:var(--thread); letter-spacing:.12em}
+.wave-title{font-size:5.5mm; color:var(--indigo); margin-bottom:2mm}
+.wave-quote{font-size:4.6mm; line-height:1.5; color:var(--ink); font-style:italic; margin-bottom:2.5mm}
+.wave-meta{font-size:3.2mm; color:var(--footer); margin-bottom:2.5mm}
+.wave-anchors{font-size:3.3mm; line-height:1.55; color:var(--ink)}
+.wave-anchors strong{color:var(--coverRed)}
+.bunting{position:absolute; top:6mm; left:0; right:0; height:20mm; display:flex; justify-content:space-around; align-items:flex-start; z-index:1}
+.flag::before{content:''; display:block; width:0; height:0; border-left:6mm solid transparent; border-right:6mm solid transparent; border-top:13mm solid var(--c)}
+.flag:nth-child(odd)::before{--c:#b71c1c}
+.flag:nth-child(3n)::before{--c:#e8c94d}
+.flag:nth-child(4n)::before{--c:#1a4d8f}
+
+/* ---- imagery ------------------------------------------------------------
+   Cutouts sit on the paper with a soft cast shadow; the one photograph is
+   presented as a taped-in print, which is what it is. Every frame is an
+   <img> you can swap by changing its src. */
+.img-slot{position:absolute; overflow:hidden; border-radius:2mm; background:transparent}
+.img-slot img{width:100%; height:100%; object-fit:contain; display:block; filter:drop-shadow(1.5px 3px 2.5px rgba(40,30,10,.22))}
+.st{ filter:drop-shadow(2px 4px 3.5px rgba(40,30,10,.26)); }
+.polaroid{
+  background:#fff; padding:3mm 3mm 2.4mm; border:1px solid #d8d2c4;
+  box-shadow:0 8px 18px rgba(40,30,10,.26); border-radius:1mm; text-align:center;
+}
+.polaroid img{ width:100%; display:block; border-radius:.5mm }
+.polaroid .cap{ font-size:3mm; color:var(--footer); padding-top:2mm; letter-spacing:.02em }
+.keylbl{
+  font-size:2.8mm; color:var(--fieldText); font-style:italic;
+  background:var(--fieldBg); border:1px dashed var(--fieldBorder);
+  border-radius:2mm; padding:.6mm 2mm; display:inline-block;
+  transform:rotate(-1.5deg); z-index:4;
+}
+.page--story .story-body p{font-size:4.3mm; line-height:1.66; margin-bottom:3.4mm}
+
+@media print{
+  html,body{background:#fff !important; padding:0 !important; margin:0 !important}
+  .book{padding:0 !important; gap:0 !important}
+  .page{width:210mm !important; height:297mm !important; margin:0 !important; box-shadow:none !important; page-break-after:always; border-radius:0 !important}
+  .page:last-child{page-break-after:auto}
+  .page, .page *{-webkit-print-color-adjust:exact !important; print-color-adjust:exact !important}
+}
+
+/* ---- the wave spreads ----------------------------------------------------
+   Two cards on an A4 page left the lower half empty on eight consecutive
+   spreads, which reads as unfinished rather than as breathing room. Centring
+   the pair optically and letting the cards carry a little more presence turns
+   that space into framing. */
+.main:has(.wave-card){
+  display:flex; flex-direction:column; justify-content:center; gap:7mm;
+}
+.main:has(.wave-card) .wave-card{
+  margin-bottom:0;
+  padding:7mm 7mm 6mm;
+}
+.main:has(.wave-card) .wave-title{ font-size:6mm; margin-bottom:3mm }
+.main:has(.wave-card) .wave-quote{ font-size:4.9mm; line-height:1.55; margin-bottom:3.5mm }
+.main:has(.wave-card) .wave-meta { font-size:3.4mm; margin-bottom:3.5mm }
+.main:has(.wave-card) .wave-anchors{ font-size:3.5mm; line-height:1.62 }
+.main:has(.wave-card) .wave-label{ font-size:3.2mm; padding:.8mm 3.5mm }
