@@ -29,7 +29,7 @@ the frame edge, then un-multiplied out of the edge pixels so no halo is left.
 | `img_harlequin_gothic.png` | P03, the naming layer | cut from white |
 | `img_harlequin_axis.png` | P10, Wave M | cut from white |
 | `img_protocol_notebook.jpg` | P12, the archive | kept whole — it *is* the protocol, WAVE_A→O |
-| `img_book_cap.jpg` | P13, the sources | kept whole, taped-in print |
+| `img_book_cap.jpg` | P13, the sources | kept whole; printed 58mm because its source is only 640px |
 | `img_hair_key.png` | P16, the seal | cut from white; a Craiyon watermark painted out first |
 | `img_harlequin_red.png` | P16, the seal | cut from white |
 
@@ -51,3 +51,28 @@ Caveat Brush embedded from a real font file.
 `Almutairi_L_Assignment-2_Programmable-Mind-Unbroken-Reference_2026-09-05.pdf`
 — APA-style: author, initial, title, ISO date. The archive-side alternative is
 `CIRCUS-NB-HD5-IMPERIAL-A2-Programmable-Mind-Unbroken-Reference-v2.0.pdf`.
+
+
+## Print resolution
+Every image was checked against the size it actually prints at. The book
+photograph came in at only 640px on its long edge; at the 96mm it was first
+given, that is 180 dpi — visibly soft. There is no larger original, so it is
+printed at 58mm instead, which its pixels genuinely support. Upscaling would
+have invented detail that is not there.
+
+| image | printed | source | effective |
+|---|---|---|---|
+| harlequin_red | 34mm | 1377px | 1032 dpi |
+| jester_purple | 40mm | 1520px | 969 dpi |
+| clown_hero | 40mm | 1473px | 929 dpi |
+| harlequin_gothic | 47mm | 1600px | 861 dpi |
+| harlequin_queen | 40mm | 1120px | 712 dpi |
+| harlequin_axis | 38mm | 858px | 570 dpi |
+| notebook_hat | 91mm | 1920px | 536 dpi |
+| protocol_notebook | 119mm | 1920px | 411 dpi |
+| hair_key | 23mm | 298px | 332 dpi |
+| book_cap | 58mm | 640px | 312 dpi |
+
+Nothing prints below 300 dpi. Export is 9.8 MB — well inside the 100 MB
+budget, with the artwork carried losslessly rather than recompressed to save
+space it did not need to save.
