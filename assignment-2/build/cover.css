@@ -1,0 +1,26 @@
+/* Hand-set art direction for the two pages that carry no running argument —
+   the cover and the finale. The solver is free to place furniture on the
+   fourteen working pages, but these two are compositions, not layouts, so
+   their pieces are placed deliberately and locked. */
+
+/* ── PAGE 1 · cover ─────────────────────────────────────────────────────
+   The big top sits on the centre axis under the title; the two faces flank
+   it at equal optical weight, turned very slightly towards each other. */
+.page:first-of-type [data-fx="3"]{            /* the big top */
+  top:63mm !important; bottom:auto !important;
+  left:50% !important; right:auto !important;
+  width:74mm !important; height:auto !important;
+  transform:translateX(-50%) !important;
+}
+.page:first-of-type [data-fx="4"]{            /* the welcome, arms open */
+  top:70mm !important; bottom:auto !important;
+  left:17mm !important; right:auto !important;
+  width:38mm !important; height:auto !important;
+  transform:rotate(-6deg) !important;
+}
+.page:first-of-type [data-fx="5"]{            /* its bright twin */
+  top:70mm !important; bottom:auto !important;
+  left:auto !important; right:16mm !important;
+  width:36mm !important; height:auto !important;
+  transform:rotate(5deg) !important;
+}

@@ -1,0 +1,9 @@
+/* Caveat Brush — the hand of this archive. A real font file, not a CDN link,
+   so the document renders identically offline and embeds cleanly into PDF. */
+@font-face{
+  font-family:'Caveat Brush';
+  font-style:normal;
+  font-weight:400;
+  font-display:block;
+  src:url('../fonts/CaveatBrush-400.woff2') format('woff2');
+}

@@ -1,0 +1,203 @@
+/* ============================================================================
+   ASSIGNMENT 2 — READING EDITION
+   The writing, set for reading. No imagery.
+   ----------------------------------------------------------------------------
+   The scrapbook edition is the work as it was made; this is the same work as
+   it is read. The two share a hand — Caveat still carries every title, so the
+   family resemblance holds — but the body moves to EB Garamond, because
+   22,900 characters of continuous prose need a text face, not a handwriting
+   one. Colour, hierarchy and the marked passages all carry over.
+   ========================================================================== */
+
+@page{ size: A4; margin: 0; }   /* margins come from the exporter,
+                                   which also draws the running foot */
+
+:root{
+  --ink:        #1d2331;
+  --ink-soft:   #4a5266;
+  --ink-quiet:  #6b7385;
+  --navy:       #1a237e;
+  --plum:       #ad1457;
+  --crimson:    #b3243c;
+  --rule:       #d9d4c8;
+  --paper:      #fdfcf7;
+  --measure:    31em;      /* ~72 characters — the comfortable reading width */
+}
+
+*{ margin:0; padding:0; box-sizing:border-box;
+   -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+html{ background:var(--paper); }
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'EB Garamond', Georgia, serif;
+  font-size:11.6pt;
+  line-height:1.62;
+  font-feature-settings:"kern" 1,"liga" 1,"onum" 1;   /* old-style figures */
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  hyphens:none;
+}
+
+.sheet{ max-width:var(--measure); margin:0 auto; }
+
+/* ---------- the title page ---------------------------------------------- */
+.cover{
+  min-height:210mm;
+  display:flex; flex-direction:column; justify-content:center;
+  text-align:center;
+  break-after:page; page-break-after:always;
+}
+
+/* Tracking and the clipboard: Chromium decides where a space belongs in the
+   extracted text from the gap between glyphs, so generous letter-spacing makes
+   a tracked line copy out shattered — "MY RI S I N G." These two label styles
+   are tracked just far enough to read as small caps and no further. */
+.eyebrow{
+  font-size:9.8pt; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--plum); font-weight:600;
+  margin-bottom:10mm;
+}
+.display{
+  font-family:'Caveat', cursive; font-weight:700;
+  font-size:52pt; line-height:1.06; color:var(--crimson);
+  margin:0 0 8mm;
+}
+.cover .lede{
+  font-size:12.4pt; font-style:italic; color:var(--ink-soft);
+  max-width:26em; margin:0 auto 14mm;
+}
+.cover .lede + p{ margin-top:0; }
+.cover p, .cover .eyebrow, .cover .imprint{ text-align:center; }
+.cover p{ font-size:11.4pt; color:var(--ink-soft); max-width:27em; margin:0 auto; }
+.cover p + p{ margin-top:3mm; }
+
+.rule-orn{
+  width:64px; height:1px; background:var(--rule);
+  margin:12mm auto 0; position:relative;
+}
+.rule-orn::after{
+  content:"✦"; position:absolute; top:-.72em; left:50%; transform:translateX(-50%);
+  background:var(--paper); padding:0 .5em;
+  color:#c3aa62; font-size:8.5pt;
+}
+
+.imprint{
+  margin-top:14mm; font-size:9.4pt; line-height:1.85;
+  color:var(--ink-quiet); letter-spacing:.02em;
+}
+.imprint strong{ color:var(--ink-soft); font-weight:600; }
+
+/* ---------- headings ----------------------------------------------------- */
+h1{
+  font-family:'Caveat', cursive; font-weight:700;
+  font-size:25pt; line-height:1.18; color:var(--navy);
+  margin:14mm 0 5mm;
+  break-after:avoid; page-break-after:avoid;
+  /* the sections run on, the way a book runs on. Opening every section on a
+     fresh page left each one two-thirds empty and turned a continuous
+     narrative into a stack of fragments. A generous space above the heading
+     does the separating instead, and break-after:avoid keeps a heading from
+     being stranded at the foot of a page. */
+  break-inside:avoid; page-break-inside:avoid;
+}
+h1:first-of-type{ margin-top:0; }
+h1.display::after{ content:none; }
+h1:not(.display)::after{
+  content:""; display:block; width:38px; height:2px;
+  background:var(--crimson); margin-top:2.4mm; opacity:.55;
+}
+h2{
+  font-family:'EB Garamond', serif; font-weight:600; font-style:italic;
+  font-size:13.4pt; line-height:1.3; color:var(--plum);
+  margin:7mm 0 2mm;
+  break-after:avoid; page-break-after:avoid;
+}
+
+/* ---------- prose -------------------------------------------------------- */
+p{ margin:0 0 0; text-align:left; orphans:3; widows:3; }
+p + p{ margin-top:2.6mm; }
+p.centre{ text-align:center; }
+p.small{ font-size:10.4pt; color:var(--ink-soft); }
+b, strong{ font-weight:600; color:#121724; }
+
+ul{ list-style:none; margin:2mm 0 2mm; }
+li{
+  position:relative; padding-left:1.15em; margin-bottom:1mm;
+  break-inside:avoid;
+}
+li::before{
+  content:"✦"; position:absolute; left:0; top:0;
+  color:#c3aa62; font-size:.78em; line-height:2.05;
+}
+
+/* ---------- the marked passages -----------------------------------------
+   In the scrapbook these are highlighter strokes. Here they keep their
+   colour coding but as a quiet tint and a coloured edge, which is how a
+   printed edition marks a passage without shouting.                        */
+mark{
+  background:transparent; color:inherit;
+  padding:0 .12em; border-radius:2px;
+  box-decoration-break:clone; -webkit-box-decoration-break:clone;
+}
+mark.hk-y{ background:rgba(255,214,0,.20);  box-shadow:inset 0 -.62em 0 rgba(255,214,0,.16); }
+mark.hk-p{ background:rgba(233,30,99,.13); }
+mark.hk-b{ background:rgba(21,101,192,.12); }
+mark.hk-g{ background:rgba(46,125,50,.13); }
+mark.hk-v{ background:rgba(106,27,154,.13); }
+mark.hk-o{ background:rgba(230,81,0,.13); }
+
+/* a marked passage that is the whole paragraph becomes a pull-quote */
+p.centre > mark:only-child{
+  display:inline-block; padding:2.4mm 4mm; margin:1.5mm 0;
+  font-size:11.8pt; line-height:1.5;
+}
+
+/* ---------- the framed blocks ------------------------------------------- */
+.box{
+  border-left:2px solid var(--rule);
+  padding:1mm 0 1mm 5mm;
+  margin:4mm 0 4mm;
+  break-inside:avoid; page-break-inside:avoid;
+}
+.box h2{ margin-top:0; }
+
+.note{
+  border:1px solid var(--rule); border-left:3px solid var(--crimson);
+  background:#fdfaf1;
+  padding:4mm 5mm; margin:6mm 0;
+  break-inside:avoid; page-break-inside:avoid;
+}
+.note h3{
+  font-family:'Caveat', cursive; font-weight:700; font-size:16pt;
+  color:var(--crimson); margin-bottom:1.5mm;
+}
+.note p{ font-size:11pt; color:var(--ink-soft); font-style:italic; }
+
+.ribbon{
+  display:block; text-align:center;
+  font-size:9.6pt; letter-spacing:.05em; text-transform:uppercase;
+  color:#8a6d1c; font-weight:600;
+  margin:6mm 0;
+}
+.ribbon::before, .ribbon::after{ content:"—"; opacity:.45; margin:0 .7em; }
+
+/* ---------- the closing -------------------------------------------------- */
+.finale{ text-align:center; break-before:page; page-break-before:always; padding-top:24mm; }
+.finale .display{ font-size:40pt; color:var(--navy); letter-spacing:.01em; }
+.finale p{ text-align:center; }
+.sig{
+  font-family:'Caveat', cursive; font-weight:700;
+  font-size:23pt; color:var(--navy);
+  display:block; margin-top:12mm;
+}
+.byline{
+  font-family:'Caveat', cursive; font-size:12.5pt;
+  color:var(--ink-quiet); display:block; margin-top:1mm;
+}
+
+@media screen{
+  html{ background:#e9e5db; }
+  body{ padding:22mm 20mm; }
+}

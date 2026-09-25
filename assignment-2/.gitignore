@@ -1,0 +1,3 @@
+# Python bytecode generated when the tools are imported by a build
+__pycache__/
+*.pyc

@@ -1,0 +1,345 @@
+[
+ {
+  "slot": "img001",
+  "asset": "sheet-37-12",
+  "w": 678,
+  "h": 900,
+  "cue": "the recurring jester emblem \u2014 used as the mark and the ghost watermark"
+ },
+ {
+  "slot": "img002",
+  "asset": "sheet-77-14",
+  "w": 900,
+  "h": 760,
+  "cue": "the big top: the show the whole story takes place inside"
+ },
+ {
+  "slot": "img003",
+  "asset": "sheet-02-01",
+  "w": 756,
+  "h": 900,
+  "cue": "the welcome, arms open"
+ },
+ {
+  "slot": "img004",
+  "asset": "sheet-11-04",
+  "w": 900,
+  "h": 848,
+  "cue": "its bright twin, answering across the title"
+ },
+ {
+  "slot": "img005",
+  "asset": "sheet-11-16",
+  "w": 893,
+  "h": 900,
+  "cue": "key: material goals \u2014 happily replaced"
+ },
+ {
+  "slot": "img006",
+  "asset": "sheet-77-09",
+  "w": 900,
+  "h": 856,
+  "cue": "key: aim true"
+ },
+ {
+  "slot": "img007",
+  "asset": "sheet-87-01",
+  "w": 875,
+  "h": 900,
+  "cue": "key: break free \u00b7 inner peace \u00b7 walk on"
+ },
+ {
+  "slot": "img008",
+  "asset": "sheet-37-04",
+  "w": 900,
+  "h": 768,
+  "cue": "left behind / searched for \u2014 the two masks"
+ },
+ {
+  "slot": "img009",
+  "asset": "sheet-37-10",
+  "w": 900,
+  "h": 799,
+  "cue": "key: look closer \u00b7 repeated copies \u00b7 still standing"
+ },
+ {
+  "slot": "img010",
+  "asset": "sheet-37-10",
+  "w": 900,
+  "h": 799,
+  "cue": "key: the copies \u2014 same shape, same smile (deliberately the same asset as img009)"
+ },
+ {
+  "slot": "img011",
+  "asset": "sheet-02-10",
+  "w": 797,
+  "h": 900,
+  "cue": "first smile of the show \u2014 watch it repeat"
+ },
+ {
+  "slot": "img012",
+  "asset": "sheet-87-03",
+  "w": 759,
+  "h": 900,
+  "cue": "key: rest was part of the lab"
+ },
+ {
+  "slot": "img013",
+  "asset": "sheet-87-15",
+  "w": 900,
+  "h": 248,
+  "cue": "scattered puzzle pieces"
+ },
+ {
+  "slot": "img014",
+  "asset": "sheet-11-11",
+  "w": 670,
+  "h": 900,
+  "cue": "...coming back together"
+ },
+ {
+  "slot": "img015",
+  "asset": "sheet-02-13",
+  "w": 828,
+  "h": 900,
+  "cue": "key: read rise"
+ },
+ {
+  "slot": "img016",
+  "asset": "sheet-37-06",
+  "w": 900,
+  "h": 900,
+  "cue": "key: wonder"
+ },
+ {
+  "slot": "img017",
+  "asset": "sheet-77-12",
+  "w": 703,
+  "h": 900,
+  "cue": "the lab, its own rules"
+ },
+ {
+  "slot": "img018",
+  "asset": "sheet-02-12",
+  "w": 900,
+  "h": 900,
+  "cue": "tools that love the craziness"
+ },
+ {
+  "slot": "img019",
+  "asset": "sheet-11-17",
+  "w": 900,
+  "h": 900,
+  "cue": "spaces bigger than the jumps"
+ },
+ {
+  "slot": "img020",
+  "asset": "sheet-87-20",
+  "w": 900,
+  "h": 248,
+  "cue": "key: every piece connects"
+ },
+ {
+  "slot": "img021",
+  "asset": "sheet-37-07",
+  "w": 716,
+  "h": 900,
+  "cue": "the map becoming a path"
+ },
+ {
+  "slot": "img022",
+  "asset": "sheet-77-11",
+  "w": 476,
+  "h": 900,
+  "cue": "key: the bridge \u2014 goals \u2192 plan \u2192 why"
+ },
+ {
+  "slot": "img023",
+  "asset": "sheet-11-19",
+  "w": 673,
+  "h": 900,
+  "cue": "key: gentle eyes see further"
+ },
+ {
+  "slot": "img024",
+  "asset": "sheet-37-03",
+  "w": 856,
+  "h": 900,
+  "cue": "key: read rise"
+ },
+ {
+  "slot": "img025",
+  "asset": "sheet-37-15",
+  "w": 900,
+  "h": 729,
+  "cue": "key: rigidity \u2014 the same taste, again"
+ },
+ {
+  "slot": "img026",
+  "asset": "sheet-02-02",
+  "w": 900,
+  "h": 859,
+  "cue": "key: a rehearsed smile \u2014 the show"
+ },
+ {
+  "slot": "img027",
+  "asset": "sheet-02-04",
+  "w": 900,
+  "h": 773,
+  "cue": "the gate \u2014 enter if you dare"
+ },
+ {
+  "slot": "img028",
+  "asset": "sheet-77-13",
+  "w": 830,
+  "h": 900,
+  "cue": "the doorman"
+ },
+ {
+  "slot": "img029",
+  "asset": "sheet-11-12",
+  "w": 849,
+  "h": 900,
+  "cue": "the welcome \u2014 wide arms, loud colors"
+ },
+ {
+  "slot": "img030",
+  "asset": "sheet-37-16",
+  "w": 846,
+  "h": 900,
+  "cue": "the one who spoke"
+ },
+ {
+  "slot": "img031",
+  "asset": "sheet-77-08",
+  "w": 900,
+  "h": 859,
+  "cue": "the painted smile \u2014 look closer"
+ },
+ {
+  "slot": "img032",
+  "asset": "sheet-02-11",
+  "w": 857,
+  "h": 900,
+  "cue": "and the smile beside it"
+ },
+ {
+  "slot": "img033",
+  "asset": "sheet-37-13",
+  "w": 900,
+  "h": 875,
+  "cue": "the tangled, exhausted mind"
+ },
+ {
+  "slot": "img034",
+  "asset": "sheet-11-10",
+  "w": 900,
+  "h": 799,
+  "cue": "arrogant in what he memorized"
+ },
+ {
+  "slot": "img035",
+  "asset": "sheet-77-07",
+  "w": 759,
+  "h": 900,
+  "cue": "the play \u2014 keep them laughing"
+ },
+ {
+  "slot": "img036",
+  "asset": "sheet-11-18",
+  "w": 846,
+  "h": 900,
+  "cue": "the puppets in their final live show"
+ },
+ {
+  "slot": "img037",
+  "asset": "sheet-02-16",
+  "w": 806,
+  "h": 900,
+  "cue": "studied belittlement"
+ },
+ {
+  "slot": "img038",
+  "asset": "sheet-11-02",
+  "w": 827,
+  "h": 900,
+  "cue": "what the eyes see is not what the soul holds"
+ },
+ {
+  "slot": "img039",
+  "asset": "sheet-37-17",
+  "w": 900,
+  "h": 765,
+  "cue": "the audience \u2014 enjoying the show"
+ },
+ {
+  "slot": "img040",
+  "asset": "sheet-87-08",
+  "w": 628,
+  "h": 900,
+  "cue": "the poisoned dagger, same taste"
+ },
+ {
+  "slot": "img041",
+  "asset": "sheet-02-17",
+  "w": 867,
+  "h": 900,
+  "cue": "by what scale are they weighed"
+ },
+ {
+  "slot": "img042",
+  "asset": "sheet-37-09",
+  "w": 871,
+  "h": 900,
+  "cue": "all of them human"
+ },
+ {
+  "slot": "img043",
+  "asset": "sheet-37-02",
+  "w": 867,
+  "h": 900,
+  "cue": "the smile fades \u2014 the mask stays"
+ },
+ {
+  "slot": "img044",
+  "asset": "sheet-02-04",
+  "w": 900,
+  "h": 773,
+  "cue": "the show goes on... without her"
+ },
+ {
+  "slot": "img045",
+  "asset": "sheet-37-14",
+  "w": 900,
+  "h": 772,
+  "cue": "lightweight, fast"
+ },
+ {
+  "slot": "img046",
+  "asset": "sheet-87-04",
+  "w": 900,
+  "h": 717,
+  "cue": "the mask stays with the show"
+ },
+ {
+  "slot": "img047",
+  "asset": "sheet-77-03",
+  "w": 762,
+  "h": 900,
+  "cue": "...she walks free"
+ },
+ {
+  "slot": "img048",
+  "asset": "sheet-02-06",
+  "w": 666,
+  "h": 900,
+  "cue": "the open field is home"
+ },
+ {
+  "slot": "img049",
+  "asset": "sheet-37-11",
+  "w": 704,
+  "h": 900,
+  "cue": "uproot with love, not hate"
+ }
+]

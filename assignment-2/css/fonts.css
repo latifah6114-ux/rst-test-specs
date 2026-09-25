@@ -1,0 +1,35 @@
+/* Caveat & Kalam — the hand of the document.
+   Static instances, not variable: a variable instance cannot be subset
+   into a PDF as a real font program and degrades to Type3 outlines. */
+
+@font-face{
+  font-family:'Caveat';
+  font-style:normal;
+  font-weight:600;
+  font-display:block;
+  src:url('../fonts/Caveat-600.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Caveat';
+  font-style:normal;
+  font-weight:700;
+  font-display:block;
+  src:url('../fonts/Caveat-700.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Kalam';
+  font-style:normal;
+  font-weight:400;
+  font-display:block;
+  src:url('../fonts/Kalam-400.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Kalam';
+  font-style:normal;
+  font-weight:700;
+  font-display:block;
+  src:url('../fonts/Kalam-700.woff2') format('woff2');
+}
